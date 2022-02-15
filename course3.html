@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+   <title>Course-Moove Your Future</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/owl.css">
+     
+
+    <style>
+      .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#coursedetail {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#coursedetail td, #coursedetail th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#coursedetail tr:nth-child(even){background-color: #f2f2f2;}
+
+#coursedetail tr:hover {background-color: #ddd;}
+
+#coursedetail th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.collapsible2 {
+  background-color: #E8E2E1;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible2:hover {
+  background-color: #E98372;
+}
+
+.collapsible2:after {
+  content: '';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="https://moove-your-future.com/wp-content/uploads/2020/04/logo_moove.png" width="70" height="50"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                  <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-1-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>Course 3</h4>
+              <h2>Créer votre activité</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="https://moove-your-future.com/wp-content/uploads/2020/05/lancer-activite.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <table id="coursedetail">
+<h3> Course Details</h3>
+  
+  <tr>
+    <td>Lectures</td>
+    <td>0</td>
+
+  </tr>
+  <tr>
+    <td>Quizzes</td>
+    <td>0</td>
+
+  </tr>
+  <tr>
+    <td>Duration</td>
+    <td>50 Hours</td>
+   
+  </tr>
+  <tr>
+    <td>Skills level</td>
+    <td>All Levels</td>
+  
+  </tr>
+  
+  <tr>
+    <td>Language</td>
+    <td>English</td>
+
+  </tr>
+  <tr>
+    <td>Students</td>
+    <td></td>
+
+  </tr>
+  <tr>
+    <td>Assesment</td>
+    <td></td>
+  
+  </tr>
+ 
+</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="team-members">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+        
+            </div>
+
+            <div class="tab">
+  <button  class="col-md-3" class="tablinks" onclick="openCity(event, 'Apercu')" id="defaultOpen">Apercu</button>
+  <button class="col-md-3" class="col-md-4" class="tablinks" onclick="openCity(event, 'Detail')">Detail</button>
+  <button class="col-md-3" class="tablinks" onclick="openCity(event, 'Formateur')">Formateur</button>
+  <button class="col-md-3" class="tablinks" onclick="openCity(event, 'Review')">Review</button>
+</div>
+
+<!-- Tab content -->
+<div id="Apercu" class="tabcontent" align="center">
+  <p>CHOISIR LE TRAVAIL QUI VOUS CORRESPOND VRAIMENT</p><br>
+  Dans ce module, nous allons construire pas à pas votre future activité. Nous allons en dessiner ensemble le “Model de fonctionnement” en nous appuyant sur la grille “Business Model Canvas”.
+
+En route pour cette découverte !
+</p>
+</div>
+
+<div id="Detail" class="tabcontent">
+<div class="content">
+<p>Start Course 1</p>
+</div>
+<p>Les détails ne sont pas renseignés</p>
+</div>
+
+<br>
+
+<div id="Formateur" class="tabcontent">
+  <h3>MYF</h3>
+</div>
+<div id="Review" class="tabcontent">
+  <h3>Average rating</h3>
+  <p></p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright 2020 - Netcentrik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/owl.js"></script>
+
+   <script> function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+  </body>
+
+</html>
+

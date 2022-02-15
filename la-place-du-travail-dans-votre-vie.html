@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Course-Moove Your Future</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/owl.css">
+     
+
+    <style>
+      .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#coursedetail {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#coursedetail td, #coursedetail th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#coursedetail tr:nth-child(even){background-color: #f2f2f2;}
+
+#coursedetail tr:hover {background-color: #ddd;}
+
+#coursedetail th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.collapsible2 {
+  background-color: #E8E2E1;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible2:hover {
+  background-color: #E98372;
+}
+
+.collapsible2:after {
+  content: '';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+input[type=text],textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.imageprofile img {
+    height:250px;
+    width:100%;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkbux {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        <a class="navbar-brand" href="index.html"><img  src="https://moove-your-future.com/wp-content/uploads/2020/04/logo_moove.png" width="70" height="50"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                  <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-1-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+                   <p align="left" style="color:white;" ><a style="color:white;" href="index.html">Home</a> > <a align="left" style="color:white;" href="courses.html">All Course</a> > <a align="left" style="color:white;" href="course1.html">Structurer mon projet</a> > <a align="left" style="color:white;" href="la-place-du-travail-dans-votre-vie.html">La place du travail dans votre vie</a> </p>
+              <h4>Structurer mon projet</h4>
+              <h2>2.2 La place du travail dans votre vie !</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+            <h2>Quelle place le travail occupe-t-il dans votre vie ?
+Comment le voyez-vous ?
+Qu’est ce qu’il représente pour vous ?
+        
+            </h2>
+               
+           
+          <div class="col-md-12">
+            <div class="section-heading">
+               <p>Prenez au moins 30′ pour cet exercice.</p>
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/Lsw2FTXQ2yQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <img  src="https://moove-your-future.com/wp-content/uploads/2020/05/Sche%CC%81ma-travail-600x351.png">
+               <br>
+               <br>
+               <div>
+                Sur une feuille, tracez deux axes. Un axe horizontal “vocation / accomplissement” et un axe vertical “Gagner sa vie / Faire carrière”.
+                <br><br>
+      
+
+Maintenant, essayez de positionner la place qu’a occupé le travail dans votre vie depuis votre premier emploi. Il est possible que cette place ait évoluée au fil du temps. Peut-être même malgré vous.<br><br>
+          
+
+Et aujourd’hui. Où en êtes vous ? Est-ce juste un moyen de gagner sa vie et rien d’autre, ou, à l’opposé un levier pour “faire carrière” et accéder à un statut particulier ou à une position sociale enviable et enviée ?<br><br>
+      
+
+– Est-ce une vocation, un appel irrésistible vers une mission de vie, ou à l’opposé, est-ce un accomplissement, un intérêt très fort vers vos passions, un endroit où l’argent ne compte pas beaucoup, ni la reconnaissance ou le prestige, mais où vous allez faire passer avant tout le plaisir de “faire” quelque chose de particulier…<br><br>
+       
+
+Essayez de soupeser tout ça et de vous laisser sentir au fond de vous, à quel endroit le travail donnerait le plus de sens à votre vie …<br>
+
+Peut-être que c’est quelque chose qui a bougé pour vous au fil des années et des expériences.<br><br>
+           
+Peut-être que vous avez commencé par un job très alimentaire, parce qu’il faut bien gagner sa vie, mais que vous aspirez à autre chose.<br>
+
+Peut-être que des études poussées vous ont entraînées sur un chemin qui n’est pas celui que vous auriez préféré …<br><br>
+          
+
+Peut-être au contraire, qu’à travers un stage ou une expérience particulière, vous avez approché une forme d’idéal.
+Essayez de positionner ça sur cette “carte mentale” des différentes visions du travail.<br><br>
+           
+            
+          </div>
+
+        
+          </div>
+          <div class="col-md-60">
+            <div  class="mid-content">
+             
+            </div>
+          
+    <br>
+    <br>
+    <br>
+    <form action="course1.php">
+    <input type="submit" onClick="passvalue2()" value="Finish">
+  </form>
+    <input type="submit" onClick="toSubCourse1_2()" value="Prev Course">
+  </form>
+</div>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+    
+    <div class="team-members">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+        
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright 2020 - Netcentrik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/owl.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script> function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script>
+function toSubCourse1_2() {
+  location.replace("Avant d’embarquer faisons connaissance.html")
+}</script>
+<script>
+function passvalue2()
+  {
+
+var statustwo = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
+localStorage.setItem("textvalue9", statustwo );
+return false;
+
+}
+</script>
+  </body>
+
+</html>
+

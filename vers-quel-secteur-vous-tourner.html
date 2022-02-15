@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Course-Moove Your Future</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/owl.css">
+     
+
+    <style>
+      .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#coursedetail {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#coursedetail td, #coursedetail th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#coursedetail tr:nth-child(even){background-color: #f2f2f2;}
+
+#coursedetail tr:hover {background-color: #ddd;}
+
+#coursedetail th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.collapsible2 {
+  background-color: #E8E2E1;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible2:hover {
+  background-color: #E98372;
+}
+
+.collapsible2:after {
+  content: '';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+input[type=text],textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.imageprofile img {
+    height:250px;
+    width:100%;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkbux {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.images {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 50px;
+            padding: 30px;
+        }
+  
+        .photo {
+            max-width: 29.333%;
+            padding: 0 10px;
+            height: 240px;
+        }
+  
+        .photo img {
+            width: 80%;
+            height: 60%;
+        }
+
+
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        <a class="navbar-brand" href="index.html"><img  src="https://moove-your-future.com/wp-content/uploads/2020/04/logo_moove.png" width="70" height="50"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                  <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-1-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+                   <p align="left" style="color:white;" ><a style="color:white;" href="index.html">Home</a> > <a align="left" style="color:white;" href="courses.html">All Course</a> > <a align="left" style="color:white;" href="course1.html">Structurer mon projet</a> > <a align="left" style="color:white;" href="vers-quel-secteur-vous-tourner.html">Vers quel secteur vous tourner ?</a> </p>
+              <h4>Structurer mon projet</h4>
+              <h2>6.1 Vers quel secteur vous tourner ?</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+            <h2>Vers quel secteur vous tourner ?
+            </h2><br><br>
+            <div><b>Prenez une bonne inspiration !</b><br><br>
+Maintenant que vous avez fait ce travail d’introspection, il est temps de chercher de l’inspiration à l’extérieur.
+Vous avez peut-être déjà des idées, des envies.<br>
+Vous avez même certainement identifié un secteur d’activité. Peut-être avez-vous une idée d’un métier précis, mais avant de vous décider, vous pouvez parcourir une immense base de données et toutes les formations et métiers qui existent …<br>
+En vous rendant ici, c’est une véritable mine d’informations sur les métiers dont vous ne soupçonnez même pas l’existence …<br><br>
+<a href="https://www.studyrama.com/formations/fiches-metiers">https://www.studyrama.com/formations/fiches-metiers</a></div><br><br><br><br>
+
+ <div class="images">
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/8a/7eb606246aa5758cdf940537423213.jpg?1615363196" alt="photo" /><div class="centered">Administratif</div>
+        </div>
+  
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/db/6ab558ad50b10182cfff6aa7bcb56d.jpg?1615363196" alt="Aéronautique" /><div class="centered">Aéronautique</div>
+        </div>
+          
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/af/aa5451f5f5b3be8ef5edcc18be79ae.jpg?1615363197" alt="Agriculture" /><div class="centered">Agriculture</div>
+        </div>
+          <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/5f/46330904039b940b582c99ec4d31bd.jpg?1615363197" alt="Agroalimentaire" /><div class="centered">Agroalimentaire</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/0c/eeb78c902ec3f488280b4a421e6b27.jpg?1615363197" alt="ARCHITECTE-BTP-URBANISME" /><div class="centered">ARCHITECTE-BTP-URBANISME</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/9b/38b57a26ad303f5e3abe4c615c3716.jpg?1615363197" alt="ARMEE DE TERRE" /><div class="centered">ARMEE DE TERRE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/88/617d55579d4287fdd85ae5ca59fe21.jpg?1615363197" alt="ART" /><div class="centered">Art</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/f2/4ad4414ea634b890d3d9aabc65a925.jpg?1615363197" alt="ARTISANAT" /><div class="centered">ARTISANAT</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/4e/9c7f8efb010afb51ec960f22ebb338.jpg?1615363197" alt="ASSURANCE" /><div class="centered">ASSURANCE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/86/85c92b6d2f7642197c7772f520fc47.jpg?1615363197" alt="AUDIOVISUEL CINEMA" /><div class="centered">AUDIOVISUEL CINEMA</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/22/1e20cc9efdfc2ff887460c89b024ea.jpg?1615363197" alt="AUTOMOBILE" /><div class="centered">AUTOMOBILE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/f5/65cf3d75c70456163722ab595ebab6.jpg?1615363197" alt="BANQUE-FINANCE" /><div class="centered">BANQUE-FINANCE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/10/ec04c4db65bfac2c9a3e41934eef50.jpg?1615363198" alt="CHIMIE-BIOLIGIE" /><div class="centered">CHIMIE-BIOLIGIE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/50/ccc7d5919631b551a8147ec115ff32.jpg?1615363198" alt="COMMERCE-VENTE-DISTRIBUTION" /><div class="centered">COMMERCE-VENTE-DISTRIBUTION</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/7f/dbe4388b924df7d173e0ad0487b998.jpg?1615363198" alt="COMMUNICATION" /><div class="centered">COMMUNICATION</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/24/78fafef478cc933217555fed0376a3.jpg?1615363198" alt="COMPATIBILITE-GESTION" /><div class="centered">COMPATIBILITE-GESTION</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/00/ecaa9dd3d34b2109c19339144db348.jpg?1615363198" alt="CREATION" /><div class="centered">CREATION</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/8a/66c98efb7ed4b2c15d6195a48b3d78.jpg?1615363198" alt="CULTURE" /><div class="centered">CULTURE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/54/f7bd3d3e324bb0ee39ad6f144481b0.jpg?1615363198" alt="DROIT-JUSTICE" /><div class="centered">DROIT-JUSTICE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/b8/277edbe424c5554a7dacf5e089810a.jpg?1615363199" alt="ECONOMIE" /><div class="centered">ECONOMIE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/66/2baa175bcf4b4cade6fed333869072.jpg?1615363199" alt="EDITION ET METIERS DU LIVRE" /><div class="centered">EDITION ET METIERS DU LIVRE</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/03/d6fab27aeebaf9d111e446cda5ae1c.jpg?1615363199" alt="ENERGIE" /><div class="centered">ENERGIE</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/e4/1401f8fa33b0822d39f5c7d8f0cefa.jpg?1615363199" alt="ENSIGNEMENT" /><div class="centered">ENSIGNEMENT</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/6a/0546d14978c04bdcf16666045712b7.jpg?1615363199" alt="ENVIRONNEMENT-DEVELOPPEMENT DURABLE" /><div class="centered">ENVIRONNEMENT-DEVELOPPEMENT DURABLE</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/4d/18e8a7b67020ca4cf257cc0635ac26.jpg?1615363199" alt="Esthétique - Beauté - Coiffure" /><div class="centered">Esthétique - Beauté - Coiffure</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/5a/42d39c1af7c575ed64aec51e5765e9.jpg?1615363199" alt="EVENEMENTIEL" /><div class="centered">EVENEMENTIEL</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/89/204d8cc9e7a71a2f1f52f9fa82ddea.jpg?1615363200" alt="Fonction publique / Management public" /><div class="centered">Fonction publique / Management public</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/28/b0e477552b046c54e58035fb97868b.jpg?1615363200" alt="Hôtellerie-Restauration" /><div class="centered">Hôtellerie-Restauration</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/99/9ad762df2766f92df13d7dc0545523.jpg?1615363200" alt="Humanitare" /><div class="centered">Humanitare</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/3b/782f32561b48b892448413c7df014f.jpg?1615363200" alt="Immobilier" /><div class="centered">Immobilier</div>
+        </div>
+
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/19/8449d89c6f9c9e008ff8fd1280cb1b.jpg?1615363200" alt="Industrie" /><div class="centered">Industrie</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/cc/022d6f83e68cc699bcb8b96ddf7267.jpg?1615363200" alt="Informatique - Electronique - Numérique" /><div class="centered">Informatique - Electronique - Numérique</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/ad/590349562f8a6fdd816512356f637c.jpg?1615363200" alt="Internet-Web" /><div class="centered">Internet-Web</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/69/5d2cb1a3f96f3b05521ea1784c6ae2.jpg?1615363200" alt="Jeu vidéo - Esport - Gaming" /><div class="centered">Jeu vidéo - Esport - Gaming</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/d7/4bbc0b48c6f2523b09375fb38c6307.jpg?1615363201" alt="Journalisme" /><div class="centered">Journalisme" </div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/59/2c843606d855fa316262088d139f85.jpg?1615363201" alt="Luxe" /><div class="centered">Luxe</div>
+        </div>
+         <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/25/866f57a60a7cdcc34bddce138fccc0.jpg?1615363201" alt="Métiers animaliers" /><div class="centered">Métiers animaliers</div>
+        </div>
+          <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/ed/35c0362d0711cdbe7ff44e9210f1fb.jpg?1615363201" alt="Mode-Textile" /><div class="centered">Mode-Textile</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/8f/a941d8b00e764eb0b5963cb297aaa4.jpg?1615363201" alt="Multimedia" /><div class="centered">Multimedia</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/d2/e52cd31b7d0fe8746fddf331aa4769.jpg?1615363201" alt="Musique" /><div class="centered">Musique</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/b9/2f2b83b68db636ac74445fe5156e8c.jpg?1615363202" alt="Paramedical" /><div class="centered">Paramedical</div>
+        </div>
+        <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/52/108ecb3aeae0656a3b21384dbea342.jpg?1615363202" alt="Psychologie" /><div class="centered">Psychologie</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/da/a74541b136a69710e7172da444118d.jpg?1615363202" alt="Publicite - Marketing" /><div class="centered">Publicite - Marketing</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/c8/3248226fc8524c4b5020636c249144.jpg?1615363202" alt="Ressources Humaines" /><div class="centered">Ressources Humaines</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/f3/877b4ad3021700764abe027359c91a.jpg?1615363202" alt="Sante" /><div class="centered">Sante</div>
+        </div>
+        <div class="photo">
+            <a href="https://www.studyrama.com/formations/fiches-metiers"><img src="https://www.studyrama.com/local/cache-gd2/b1/7277ef771873961370b3ab01727ecf.jpg?1615363202" alt="Secretaire-Asistant(E)" /><div class="centered">Secretaire-Asistant(E)</div>
+        </div>
+
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/f7/c34a198b4d85c1a5a56f1290defa3f.jpg?1615363202" alt="Sécurité - Armée - Défense" /><div class="centered">Sécurité - Armée - Défense</div>
+        </div>
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/e5/1c10dbc030df8ee2e9c1cba35d8f3c.jpg?1615363203" alt="Social" /><div class="centered">Social</div>
+        </div>
+
+        <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/30/a5002d4b2734e34cf1ef05f4d4c5cd.jpg?1615363203" alt="Sport" /><div class="centered">Sport</div>
+        </div>
+         <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/39/2b2065dcab30512d9130af3306f376.jpg?1615363203" alt="Tourisme" /><div class="centered">Tourisme</div>
+        </div>
+
+ <div class="photo">
+           <a href="https://www.studyrama.com/formations/fiches-metiers"> <img src="https://www.studyrama.com/local/cache-gd2/d4/ce80ca0bd9498d6615b62816b1db38.jpg?1615363203" alt="Tranport-Logistique" /><div class="centered">Tranport-Logistique</div>
+        </div>
+
+</a>
+
+ 
+
+
+
+    </div>
+
+               
+           
+          <div class="col-md-12">
+            <div class="section-heading">
+             
+               <br>
+               <br>
+               <div>
+           
+          
+    <br>
+    <br>
+    <br>
+    <form action="course1.html">
+    <input type="submit" onClick="passvalue2()" value="Finish">
+  </form>
+    <input type="submit" onClick="toSubCourse5_1()" value="Prev Course">
+  </form>
+</div>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+    
+    <div class="team-members">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+        
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright 2020 - Netcentrik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/owl.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script> function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script>
+function toSubCourse5_1() {
+  location.replace("inventaire-de-vos-competences.html")
+}</script>
+
+<script>
+function passvalue2()
+  {
+
+var statustwo = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
+localStorage.setItem("textvalue26", statustwo );
+return false;
+
+}
+</script>
+
+  </body>
+
+</html>
+

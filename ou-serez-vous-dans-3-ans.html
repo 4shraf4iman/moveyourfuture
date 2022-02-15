@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Course-Moove Your Future</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/owl.css">
+     
+
+    <style>
+      .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#coursedetail {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#coursedetail td, #coursedetail th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#coursedetail tr:nth-child(even){background-color: #f2f2f2;}
+
+#coursedetail tr:hover {background-color: #ddd;}
+
+#coursedetail th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.collapsible2 {
+  background-color: #E8E2E1;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible2:hover {
+  background-color: #E98372;
+}
+
+.collapsible2:after {
+  content: '';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+input[type=text],textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.imageprofile img {
+    height:250px;
+    width:100%;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkbux {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        <a class="navbar-brand" href="index.html"><img  src="https://moove-your-future.com/wp-content/uploads/2020/04/logo_moove.png" width="70" height="50"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                  <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-1-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+                   <p align="left" style="color:white;" ><a style="color:white;" href="index.html">Home</a> > <a align="left" style="color:white;" href="courses.html">All Course</a> > <a align="left" style="color:white;" href="course1.html">Structurer mon projet</a> > <a align="left" style="color:white;" href="ou-serez-vous-dans-3-ans.html">Où serez-vous dans 3 ans ?</a> </p>
+              <h4>Structurer mon projet</h4>
+              <h2>6.2 Où serez-vous dans 3 ans ?</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+            <h2>Après l’inspiration, l’introspection … et l’inventaire :  La projection !
+            </h2><br><br><br>
+      
+            <div>Dans les chapitres précédents, vous avez fait un travail d’introspection et d’inventaire. Vous vous êtes connecté à vos souvenirs, à vos envies, à vos passions, mais aussi à vos compétences afin de trouver l’endroit où brûle le coeur de votre énergie.<br><br>
+
+En vous appuyant sur ce que tu vous avez pu mettre en lumière dans ces différents exercices nous vous proposons ici, de regarder vers le futur … 
+<br><br>
+<b>Prenez au moins 1 heure pour cet exercice très important. Revenez-y plusieurs fois ci nécessaire.</b><br><br>
+
+<b>L’exercice</b><br>
+L’exercice que nous vous proposons là, a pour but de vous libérer de vos contraintes quotidiennes et de vous projeter dans un monde ou vous seriez totalement libre de vos mouvements sans contrainte d’argent ! Vous en avez peut-être déjà rêvé ;-)). Sinon … c’est le moment !<br><br>
+
+Lisez bien les consignes, et prenez un temps calme pour y réfléchir. Laissez monter tout ce qui vient tranquillement. Sans écrire dans un premier temps. Vraiment, prenez tout votre temps …<br><br>
+
+<b>Les consignes</b><br><br>
+<a href="https://moove-your-future.com/wp-content/uploads/2020/09/Projection-a%CC%80-3-ans.pdf">Vous pouvez télécharger les consignes en cliquant ici</a>, ou les relire ci-dessous.<br><br>
+
+Pour cet exercice, nous allons ouvrir votre imagination et vous libérer de toutes contraintes matérielles.<br><br>
+Imaginez que vous n’avez plus aucun souci d’argent et que vous êtes totalement libre de mener l’activité que vous voulez !<br><br>
+
+Vous allez-imaginer que vous venez d’apprendre que vous allez hériter d’une très grosse somme d’argent qui vous met à l’abri de tout besoin pour de nombreuses années… (quelque chose comme plusieurs millions d’Euros). Mais il y a 3 conditions<br><br>
+
+<b>Prenez votre temps. Lisez ce qui suit puis, installez vous confortablement.</b><br><br>
+Fermez les yeux et laisser votre esprit naviguer en liberté !<br><br>
+
+<b>Voici les trois conditions :</b>
+<br><br>
+Pendant deux ans vous recevrez donc chaque mois de quoi subvenir à tous vos besoins et vous ne recevrez la totalité de l’héritage dans 3 ans que si vous avez rempli ces trois conditions.<br><br>
+
+<b>1ère condition.</b><br><br>
+Pendant la première année, vous devrez consacrer tout votre temps à apprendre, à vous former et à vous perfectionner (dans le domaine professionnel que vous souhaitez et sous la forme que tu voulez)<br><br>
+
+<b>> Quelle(s) formation(s) allez-vous choisir ?</b><br><br>
+
+ 
+
+<b>2ème condition.</b><br><br>
+Pendant l’année qui suivra, vous devrez vous consacrer à étudier ou à vous impliquer dans un projet professionnel ou une cause qui compte vraiment pour vous (sans vous préoccuper d’en tirer un profit ou un revenu).<br><br>
+
+> Dans quel projet ou cause allez vous, vous impliquer ?<br><br>
+
+ 
+
+<b>3ème condition.</b><br><br>
+Dans 3 ans, vous devrez exercer une activité professionnelle et en tirer un revenu.<br><br>
+
+ 
+
+<b>Vous allez maintenant décrire cette activité dans le formulaire ci-dessous selon les critères suivant :</b><br><br>
+
+– Quelle sera cette activité ?<br><br>
+
+– Où serez-vous installé ?<br><br>
+
+&#8226; Quel(s) métier exercerez-vous<br>
+&#8226; Serez-vous seul, et sinon et avec qui travaillerez-vous ?<br><br>
+– Quelles seront les tâches ou les activités quotidienne que vous aurez à conduire pour exercer ce métier ?<br>
+
+– A qui rendrez-vous service ou à qui vendrez-vous le fruit de ces activités ?<br>
+
+– Que vous efforcerez-vous d’accomplir ?<br>
+
+ </div>
+           
+          <div class="col-md-12">
+            <div class="section-heading">
+             
+               <br>
+               <br>
+               <div>
+
+                <h2>Dans 3 ans, décrivez le plus précisément possible : </h2><br><br>
+               <form action="/action_page.php">
+<label for="w3review"> Quelle sera votre activité ? *</label>
+<textarea id="w3review" name="w3review" rows="4" cols="50">
+ 
+  </textarea>
+
+                 <form action="/action_page.php">
+<label for="w3review"> Quelle formation avez vous envisagé pour y parvenir ? *</label>
+<textarea id="w3review" name="w3review" rows="4" cols="50">
+
+  </textarea>
+
+
+                 <form action="/action_page.php">
+<label for="w3review"> Où serez vous installé.e ? *</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+
+                 <form action="/action_page.php">
+<label for="w3review"> Quel métier exercerez-vous ? *</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+   <form action="/action_page.php">
+<label for="w3review"> Avec qui (qui seront vos collaborateurs et partenaires) ? *</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+     <form action="/action_page.php">
+<label for="w3review">Quelles seront vos activités quotidiennes ? *</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+     <form action="/action_page.php">
+<label for="w3review"> A qui profitera votre travail ? *</label>
+<textarea placeholder=" (qui seront vos clients, les personnes à qui vous serez utile et rendrez service)" id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+    <form action="/action_page.php">
+<label for="w3review">Que vous efforcerez-vous d’accomplir ?
+</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+    <form action="/action_page.php">
+<label for="w3review">Faites maintenant la liste, des 5 activités que vous faites et qui vous procurent du plaisir :</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+    <form action="/action_page.php">
+<label for="w3review">Des 5 types de personnes ou collaborateurs avec qui vous agissez au quotidien.
+</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+    <form action="/action_page.php">
+<label for="w3review">Des 5 types de personnes pour qui vous travaillez :</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+    <form action="/action_page.php">
+<label for="w3review">Des 5 verbes d’action qui décrivent le mieux ce que vos activités apportent aux gens.</label>
+<textarea id="w3review" name="w3review"  rows="4" cols="50">
+ 
+  </textarea>
+
+
+
+
+  <br><br>
+  <input type="submit" value="Valider mes réponses">
+</form><br>
+<div>Validez vos réponses au formulaire avec le bouton ci-dessus, puis validez l’étape en cliquant sur le bouton rouge ci-dessous.
+
+</div>
+          
+    <br>
+    <br>
+    <br>
+    <form action="course1.html">
+    <input type="submit" onClick="passvalue2()" value="Finish">
+  </form>
+    <input type="submit" onClick="toSubCourse6_1()" value="Prev">
+  </form>
+</div>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+    
+    <div class="team-members">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+        
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright 2020 - Netcentrik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/owl.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script> function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script>
+function toSubCourse6_1() {
+  location.replace("vers-quel-secteur-vous-tourner.html")
+}</script>
+
+<script>
+function passvalue2()
+  {
+
+var statustwo = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
+localStorage.setItem("textvalue27", statustwo );
+return false;
+
+}
+</script>
+
+  </body>
+
+</html>
+

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Course-Moove Your Future</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/owl.css">
+     
+
+    <style>
+      .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#coursedetail {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#coursedetail td, #coursedetail th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#coursedetail tr:nth-child(even){background-color: #f2f2f2;}
+
+#coursedetail tr:hover {background-color: #ddd;}
+
+#coursedetail th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.collapsible2 {
+  background-color: #E8E2E1;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible2:hover {
+  background-color: #E98372;
+}
+
+.collapsible2:after {
+  content: '';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="https://moove-your-future.com/wp-content/uploads/2020/04/logo_moove.png" width="70" height="50"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                  <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-1-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <p align="left" style="color:white;" ><a style="color:white;" href="index.html">Home</a> > <a align="left" style="color:white;" href="courses.html">All Course</a> > <a align="left" style="color:white;" href="course1.html">Structurer mon projet</a></p>
+              <h4>Course 1</h4>
+              <h2>Structurer mon projet</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="https://moove-your-future.com/wp-content/uploads/2021/07/mike-kienle-f6oKDAPcLRY-unsplash.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <table id="coursedetail">
+<h3> Course Details</h3>
+  
+  <tr>
+    <td>Lectures</td>
+    <td>30</td>
+
+  </tr>
+  <tr>
+    <td>Quizzes</td>
+    <td>0</td>
+
+  </tr>
+  <tr>
+    <td>Duration</td>
+    <td>7 Jours</td>
+   
+  </tr>
+  <tr>
+    <td>Skills level</td>
+    <td>All Level</td>
+  
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+  
+  </tr>
+  <tr>
+    <td>Language</td>
+    <td>Francais</td>
+
+  </tr>
+  <tr>
+    <td>Students</td>
+    <td>Giovanni Rovelli</td>
+
+  </tr>
+  <tr>
+    <td>Assesment</td>
+    <td></td>
+  
+  </tr>
+ 
+</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="team-members">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+        
+            </div>
+
+            <div class="tab">
+  <button  class="col-md-3" class="tablinks" onclick="openCity(event, 'Apercu')" id="defaultOpen">Apercu</button>
+  <button class="col-md-3" class="col-md-4" class="tablinks" onclick="openCity(event, 'Detail')">Detail</button>
+  <button class="col-md-3" class="tablinks" onclick="openCity(event, 'Formateur')">Formateur</button>
+  <button class="col-md-3" class="tablinks" onclick="openCity(event, 'Review')">Review</button>
+</div>
+
+<!-- Tab content -->
+<div id="Apercu" class="tabcontent" align="center">
+  <p>CHOISIR LE TRAVAIL QUI VOUS CORRESPOND VRAIMENT</p><br>
+  <h3>Faire le point,</h3><br>
+  <h3>Trouver du sens,</h3><br>
+  <h3>Choisir sa voie.</h3><br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9CeRrda4P4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+  <h3>À votre rythme :
+vous poser, faire le point, et réfléchir
+pour avancer tranquillement
+vers la construction
+de votre future vie professionnelle.</h3><br>
+  <p>Bienvenue dans ce programme qui va vous accompagner, à votre rythme, dans votre réflexion et dans la construction de votre futur. Nous allons vous aider à trouver trouver en vous-même, et avec l’appui de votre coach, le point de rencontre entre vos talents, vos compétences, vos envies, vos centres d’intérêt et … car c’est à partir de là que votre avenir se construira.
+
+</p>
+</div>
+
+<div id="Detail" class="tabcontent">
+<div class="content">
+  <p>Start Course 1</p>
+</div>
+<h3>Structurer mon projet</h3><br>
+<button type="button" class="collapsible" > Lecture 1 : Etat Des Lieux</button>
+<div class="content">
+  <br>
+  <h3 >Faire le point avant de commencer le parcours :Qui êtes-vous et où en êtes vous, professionnellement.</h3><br>
+  <button type="button" class="collapsible2" onclick="toSubCourse()" ><i style="color:green;" id="result2" ></i> Lecture 1.1 
+Avant d’embarquer faisons connaissance</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse1_1()" ><i style="color:green;" id="result1" ></i>
+   Lecture 1.2 Introduction <b style="text-align: left;" > </button>
+  <button type="button" class="collapsible2" onclick="toSubCourse1_3()"> <i style="color:green;" id="result3" ></i> Lecture 1.3 Votre formation</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse1_4()"><i style="color:green;" id="result4" ></i> Lecture 1.4 Votre itinéraire de vie</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse1_5()"><i style="color:green;" id="result5" ></i> Lecture 1.5 Quel type de personnalité êtes-vous ?</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse1_6()"><i style="color:green;" id="result6" ></i> Lecture 1.6 Définir votre objectif pour ce parcours</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse1_7()"><i style="color:green;" id="result7" ></i> Lecture 1.7 VOTRE SYNTHÈSE DE LA PREMIERE ETAPE</button>
+
+</div>
+<br>
+<button type="button" class="collapsible" > Lecture 2 : En Quête De Sens 1/2</button>
+<div class="content">
+  <br>
+  <h3 >Dans ce chapitre, vous allez avancer pas à pas vers ce qui donne du sens à votre vie et vers ce pour quoi vous êtes fait !</h3><br>
+  <button type="button" class="collapsible2" onclick="toSubCourse2_1()" ><i style="color:green;" id="result8" ></i> Lecture 2.1 Qu’est-ce qui compte pour vous dans la vie !</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse2_2()" ><i style="color:green;" id="result9" ></i> Lecture 2.2 La place du travail dans votre vie</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse2_3()" ><i style="color:green;" id="result10" ></i> Lecture 2.3 Avant d’avoir 20 ans j’aimais …</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse2_4()" ><i style="color:green;" id="result11" ></i> Lecture 2.4 Votre parcours de vie</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse2_5()" ><i style="color:green;" id="result12" ></i> Lecture 2.5 VOTRE SYNTHÈSE DE L’ETAPE 2</button>
+
+</div>
+
+<br>
+
+<button type="button" class="collapsible">Lecture 3 : En Quête De Sens 2/2</button>
+<div class="content">
+  <br>
+ <button type="button" class="collapsible2" onclick="toSubCourse3_1()" ><i style="color:green;" id="result13" ></i> Lecture 3.1 Vos valeurs</button><br>
+  <button type="button" class="collapsible2" onclick="toSubCourse3_2()" ><i style="color:green;" id="result14" ></i> Lecture 3.2 A la recherche d’un hérisson</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse3_3()" ><i style="color:green;" id="result15" ></i> Lecture 3.3 WHY ! Etape 1 : Succès et Difficultés</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse3_4()" ><i style="color:green;" id="result16" ></i> Lecture 3.4 WHY ! Etape 2</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse3_5()" ><i style="color:green;" id="result17" ></i> Lecture 3.5 VOTRE SYNTHÈSE DE L’ETAPE 3</button>
+</div>
+<br>
+
+<button type="button" class="collapsible">Lecture 4 : Savoirs Faire Et Savoir Être 1/2</button>
+<div class="content">
+  <br>
+  <h3>Dans cette section, vous allez explorer toutes vos compétences, prendre conscience de ce qu'elles disent de vous et de votre personnalité.</h3><br>
+  <button type="button" class="collapsible2" onclick="toSubCourse4_1()" ><i style="color:green;" id="result18" ></i> Lecture 4.1 Introduction</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse4_2()" ><i style="color:green;" id="result19" ></i> Lecture 4.2 5 questions sur vos principaux postes</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse4_3()" ><i style="color:green;" id="result20" ></i> Lecture 4.3 Que souhaiterez-vous retenir ?</button>
+   <button type="button" class="collapsible2" onclick="toSubCourse4_4()" ><i style="color:green;" id="result21" ></i> Lecture 4.4 VOTRE SYNTHÈSE DE L’ETAPE 4</button>
+</div>
+
+<br>
+
+
+<button type="button" class="collapsible">Lecture 5 : Savoirs Faire Et Savoir Etre 2/2</button>
+<div class="content">
+  <button type="button" class="collapsible2" onclick="toSubCourse5_1()" ><i style="color:green;" id="result22" ></i> Lecture 5.1 Inventaire de vos compétences</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse5_2()" ><i style="color:green;" id="result23" ></i> Lecture 5.2 Ce que vos préférences disent de vous</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse5_3()" ><i style="color:green;" id="result24" ></i> Lecture 5.3 Palmarès de vos compétences</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse5_4()" ><i style="color:green;" id="result25" ></i> Lecture 5.4 VOTRE SYNTHÈSE DE L’ETAPE 5</button>
+</div>
+
+<br>
+
+
+<button type="button" class="collapsible">Lecture 6 : Ouvrir Le Champ Des Possibles Et Faire Des Choix</button>
+<div class="content">
+  <br>
+  <h3>C'est la fin de ce parcours. Il est temps d'élargir le champ des possibles et de faire un ou des choix de voies avec votre coach.</h3><br>
+   <button type="button" class="collapsible2" onclick="toSubCourse6_1()" ><i style="color:green;" id="result26" ></i> Lecture 6.1 Vers quel secteur vous tourner ?</button>
+   <button type="button" class="collapsible2" onclick="toSubCourse6_2()" ><i style="color:green;" id="result27" ></i> Lecture 6.2 Où serez-vous dans 3 ans ? </button>
+   <button type="button" class="collapsible2" onclick="toSubCourse6_3()" ><i style="color:green;" id="result28" ></i> Lecture 6.3 Dans 3 ans : “Phrases action”</button>
+   <button type="button" class="collapsible2" onclick="toSubCourse6_4()" ><i style="color:green;" id="result29" ></i> Lecture 6.4 VOTRE SYNTHÈSE FINALE : L’heure du bilan et des choix</button>
+  <button type="button" class="collapsible2" onclick="toSubCourse6_5()" ><i style="color:green;" id="result30" ></i> Lecture 6.5 Avant de se quitter</button>
+
+
+
+<br>
+
+<div id="Formateur" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="Review" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright 2020 - Netcentrik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/owl.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script> function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script>
+function toSubCourse() {
+  window.open("Avant d’embarquer faisons connaissance.html")
+}
+function toSubCourse1_1() {
+   window.open("introduction1.html")
+}
+function toSubCourse1_3() {
+   window.open("votre-formation.html")
+}
+function toSubCourse1_4() {
+   window.open("votre-itineraire.html")
+}
+function toSubCourse1_5() {
+   window.open("quel-type-de-personnalite-etes-vous.html")
+}
+function toSubCourse1_6() {
+  window.open("definir-votre-objectif-pour-ce-parcourscopier.html")
+}
+function toSubCourse1_7() {
+   window.open("votre-synthese-de-la-premiere-etape.html")
+}
+
+
+
+
+
+
+function toSubCourse2_1() {
+   window.open("quest-ce-qui-compte-pour-vous-dans-la-vie.html")
+}
+
+function toSubCourse2_2() {
+   window.open("la-place-du-travail-dans-votre-vie.html")
+}
+
+function toSubCourse2_3() {
+   window.open("avant-davoir-20-ans-jaimais.html")
+}
+function toSubCourse2_4() {
+  window.open("votre-parcours-de-vie.html")
+}
+function toSubCourse2_5() {
+  window.open("votre-synthese-de-letape-2.html")
+}
+
+
+
+
+function toSubCourse3_1() {
+  window.open("vos-valeurs.html")
+}
+function toSubCourse3_2() {
+  window.open("a-la-recherche-dun-herisson.html")
+}
+function toSubCourse3_3() {
+  window.open("why-etape-1-succes-et-difficultes.html")
+}
+function toSubCourse3_4() {
+  window.open("why-etape-2.html")
+}
+function toSubCourse3_5() {
+  window.open("votre-synthese-de-letape-3.html")
+}
+
+
+
+
+function toSubCourse4_1() {
+  window.open("introduction.html")
+}
+function toSubCourse4_2() {
+  window.open("5-questions-sur-vos-principaux-postes.html")
+}
+function toSubCourse4_3() {
+  window.open("que-souhaiterez-vous-retenir.html")
+}
+function toSubCourse4_4() {
+  window.open("votre-synthese-de-letape-4.html")
+}
+
+
+
+
+
+function toSubCourse5_1() {
+  window.open("inventaire-de-vos-competences.html")
+}
+function toSubCourse5_2() {
+  window.open("ce-que-vos-preferences-disent-de-vous.html")
+}
+function toSubCourse5_3() {
+  window.open("palmares-de-vos-competences.html")
+}
+function toSubCourse5_4() {
+  window.open("votre-synthese-de-letape-5.html")
+}
+
+
+
+function toSubCourse6_1() {
+  window.open("vers-quel-secteur-vous-tourner.html")
+}
+
+function toSubCourse6_2() {
+  window.open("ou-serez-vous-dans-3-ans.html")
+}
+function toSubCourse6_3() {
+  window.open("dans-3-ans-phrases-action.html")
+}
+function toSubCourse6_4() {
+  window.open("votre-synthese-finale-lheure-du-bilan-et-des-choix.html")
+}
+function toSubCourse6_5() {
+  window.open("avant-de-se-quitter.html")
+}
+
+
+
+</script>
+<script>
+  document.getElementById("result2").innerHTML=localStorage.getItem('textvalue2');
+  
+</script>
+
+<script>
+ document.getElementById("result1").innerHTML=localStorage.getItem('textvalue1');
+</script>
+
+<script>
+ document.getElementById("result3").innerHTML=localStorage.getItem('textvalue3');
+</script>
+
+<script>
+ document.getElementById("result4").innerHTML=localStorage.getItem('textvalue4');
+</script>
+
+<script>
+ document.getElementById("result5").innerHTML=localStorage.getItem('textvalue5');
+</script>
+
+<script>
+ document.getElementById("result6").innerHTML=localStorage.getItem('textvalue6');
+</script>
+
+<script>
+ document.getElementById("result7").innerHTML=localStorage.getItem('textvalue7');
+</script>
+
+
+
+
+<script>
+ document.getElementById("result8").innerHTML=localStorage.getItem('textvalue8');
+</script>
+
+<script>
+ document.getElementById("result9").innerHTML=localStorage.getItem('textvalue9');
+</script>
+
+<script>
+ document.getElementById("result10").innerHTML=localStorage.getItem('textvalue10');
+</script>
+
+<script>
+ document.getElementById("result11").innerHTML=localStorage.getItem('textvalue11');
+</script>
+
+<script>
+ document.getElementById("result12").innerHTML=localStorage.getItem('textvalue12');
+</script>
+
+
+
+
+
+<script>
+ document.getElementById("result13").innerHTML=localStorage.getItem('textvalue13');
+</script>
+
+<script>
+ document.getElementById("result14").innerHTML=localStorage.getItem('textvalue14');
+</script>
+
+
+<script>
+ document.getElementById("result15").innerHTML=localStorage.getItem('textvalue15');
+</script>
+
+
+<script>
+ document.getElementById("result16").innerHTML=localStorage.getItem('textvalue16');
+</script>
+
+<script>
+ document.getElementById("result17").innerHTML=localStorage.getItem('textvalue17');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+ document.getElementById("result18").innerHTML=localStorage.getItem('textvalue18');
+</script>
+
+
+<script>
+ document.getElementById("result19").innerHTML=localStorage.getItem('textvalue19');
+</script>
+
+<script>
+ document.getElementById("result20").innerHTML=localStorage.getItem('textvalue20');
+</script>
+
+<script>
+ document.getElementById("result21").innerHTML=localStorage.getItem('textvalue21');
+</script>
+  </body>
+
+
+
+
+<script>
+ document.getElementById("result22").innerHTML=localStorage.getItem('textvalue22');
+</script>
+  </body>
+
+
+  <script>
+ document.getElementById("result23").innerHTML=localStorage.getItem('textvalue23');
+</script>
+  </body>
+
+  <script>
+ document.getElementById("result24").innerHTML=localStorage.getItem('textvalue24');
+</script>
+  </body>
+
+  <script>
+ document.getElementById("result25").innerHTML=localStorage.getItem('textvalue25');
+</script>
+
+
+
+
+<script>
+ document.getElementById("result26").innerHTML=localStorage.getItem('textvalue26');
+</script>
+
+<script>
+ document.getElementById("result27").innerHTML=localStorage.getItem('textvalue27');
+</script>
+
+<script>
+ document.getElementById("result28").innerHTML=localStorage.getItem('textvalue28');
+</script>
+
+<script>
+ document.getElementById("result29").innerHTML=localStorage.getItem('textvalue29');
+</script>
+
+<script>
+ document.getElementById("result30").innerHTML=localStorage.getItem('textvalue30');
+</script>
+
+  </body>
+</html>
+
